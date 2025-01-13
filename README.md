@@ -17,14 +17,14 @@ The Movie Information Hub is a single-page web application that allows users to 
 * As a user, I can securely register for an account and log in to access the application's features.
 
 * As a user, I can search for movies by title, so that I can quickly find information about my favorite films.
+  
+* As a user, I can view detailed information about a movie, including its plot,cast,and ratings so that I can decide if I want to watch it.
 
 * As a user, I can add movies to a personal watchlist, so that I can keep track of films I want to watch later
 
 * As a user, I can remove movies from my watchlist, so that I can manage the list based on my preferences.
   
-* As a user, I can sort search results by release date or rating, so that I can prioritize movies according to my preferences.
-  
-* As a user, I can easily remove movies from my watchlist whenever I choose.
+* As a user, I can sort search results by rating, so that I can prioritize movies according to my preferences.
 
 * As a user, I can watch trailers for movies directly within the application, so that I can preview them before watching.
 
