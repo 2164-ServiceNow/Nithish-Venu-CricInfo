@@ -1,6 +1,6 @@
-# Project Title : Movie Information Hub
+# Project Title : CricInfo Hub
 ### Project Description:
-The Movie Information Hub is a single-page web application that allows users to search for movies, view detailed information about them (e.g., poster, plot, cast, ratings), and manage a personalized watchlist. The application integrates with the TMDB API to fetch movie data in real time.
+The CricInfo Hub is a single-page web application designed to provide real-time cricket updates, including live scores, match schedules, player statistics, and team rankings. It integrates with a public cricket API to offer users a seamless experience for staying updated on their favorite sport.
 ### Technologies Used :
 * HTML
 
@@ -10,25 +10,25 @@ The Movie Information Hub is a single-page web application that allows users to 
 
 * AngularJS (Version 1.8.x)
 
-* TMDb API (https://api.themoviedb.org)
+* ATD API ([ATD](https://www.allthingsdev.co/))
 
 ### User Stories:
 
-* As a user, I can securely register for an account and log in to access the application's features.
+* As a user, I want to register for an account and securely log in to access personalized features of the application.
 
-* As a user, I can search for movies by title, so that I can quickly find information about my favorite films.
+* As a user, I want to view live scores of ongoing matches to stay updated in real time.
   
-* As a user, I can view detailed information about a movie, including its plot,cast,and ratings so that I can decide if I want to watch it.
+* As a user, I want to check upcoming match schedules so that I can plan to watch my favorite games.
 
-* As a user, I can add movies to a personal watchlist, so that I can keep track of films I want to watch later
+* As a user, I want to search for detailed player statistics, including runs, wickets, and rankings.
 
-* As a user, I can remove movies from my watchlist, so that I can manage the list based on my preferences.
+* As a user, I want to filter matches by format (e.g., Test, ODI, T20) to find the matches I’m most interested in.
   
-* As a user, I can sort search results by rating, so that I can prioritize movies according to my preferences.
+* As a user, I want to see team rankings across formats, so I can compare my favorite teams.
 
-* As a user, I can watch trailers for movies directly within the application, so that I can preview them before watching.
+* As a user, I want to view detailed scorecards for completed matches, including batting, bowling, and fielding stats.
 
-* As a user, I can filter search results by genre or release year, so that I can find movies that match my interests.
+* As a user, I want to filter match results by tournament or year to view historical records.
 
 
 **Development Environment Setup:**
