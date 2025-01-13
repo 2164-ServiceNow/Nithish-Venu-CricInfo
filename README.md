@@ -31,6 +31,6 @@ MovieNext is a dynamic Single Page Application (SPA) that revolutionizes the way
 *  As a user, I am provided with clear, user-friendly error messages when a search or API call fails, ensuring a seamless experience.
 
 ### Collaborators:
-ShaikTasleem  - [Shaik Tasleem](https://github.com/Shaik-Tasleem)
+Venu Babu Peram  - [venubabuperam](https://github.com/venubabuperam)
 
-Mohammed Jassim  - [Mohammed Jassim](https://github.com/Mohammed10Jassim)
+Nithish Babu C  - [Nithish Babu](https://github.com/cnithishbabu16)
