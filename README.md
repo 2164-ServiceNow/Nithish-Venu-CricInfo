@@ -1,34 +1,36 @@
-#Project Title: Movie Information Hub
-###Project Description:
-The Movie Information Hub is a single-page web application that allows users to search for movies, view detailed information about them (e.g., poster, plot, cast, ratings), and manage a personalized watchlist. The application integrates with the OMDb API to fetch movie data in real time.
-Technologies Used:
+# Project Title : Movie Information Hub
+### Project Description:
+MovieNext is a dynamic Single Page Application (SPA) that revolutionizes the way users discover and manage their movie preferences. It enables users to search for movies, view comprehensive details such as posters, plots, casts, and ratings, and curate personalized watchlists. Additionally, users can create accounts, log in, and securely access their watchlists across devices. By integrating the TMDb API, MovieNext delivers real-time, accurate movie data in a responsive and visually appealing interface.
+### Technologies Used :
+* HTML
 
-###Frontend:
+* CSS
 
-HTML
-CSS
-JavaScript
-AngularJS (Version 1.8.x)
-API:
+* JavaScript
 
-TMDb API (Official Documentation)
+* AngularJS (Version 1.8.x)
 
+* TMDb API (https://api.themoviedb.org)
 
+### User Stories:
 
-###User Stories:
+* As a user, I am able to create an account to securely store and manage my personalized watchlist.
 
-As a user, I want to login to my account with secure authentication to access the appplication features.
-As a user, I want to search for movies by title, so that I can quickly find information about my favorite films.
-As a user, I want to view detailed information about a movie, including its plot, cast, and ratings, so that I can decide if I want to watch it.
-As a user, I want to add movies to a personal watchlist, so that I can keep track of films I want to watch later.
-As a user, I want to remove movies from my watchlist, so that I can manage the list based on my preferences.
-As a user, I want to sort search results by release date or rating, so that I can prioritize movies according to my preferences.
-As a user, I want to view a list of similar movies when I click on a movie's details, so that I can discover related films.
-As a user, I want to watch trailers for movies directly within the application, so that I can preview them before watching.
-As a user, I want to filter search results by genre or release year, so that I can find movies that match my interests.
+* As a user, I can log in to my account with secure authentication to access my personalized watchlist and other features.
 
-###Collaborators:
+*  As a user, I can search for movies by title, and view a curated list of relevant results based on my search query.
 
-Nithish Babu C -
-Venu Babu P -
+* As a user, I can click on a movie from the search results to view its detailed information, including description, cast, and release date.
 
+* As a user, I can add movies to my watchlist directly from the movie details page for future reference.
+
+* As a user, I can easily remove movies from my watchlist whenever I choose.
+
+* As a user, I can filter my watchlist by specific criteria, such as genre or release year, for improved browsing and management.
+
+*  As a user, I am provided with clear, user-friendly error messages when a search or API call fails, ensuring a seamless experience.
+
+### Collaborators:
+ShaikTasleem  - [Shaik Tasleem](https://github.com/Shaik-Tasleem)
+
+Mohammed Jassim  - [Mohammed Jassim](https://github.com/Mohammed10Jassim)
