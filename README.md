@@ -10,7 +10,7 @@ The CricInfo Hub is a single-page web application designed to provide real-time 
 
 * AngularJS (Version 1.8.x)
 
-* ATD API ([ATD](https://www.allthingsdev.co/))
+* Cricket API ([ATD](https://www.allthingsdev.co/))
 
 ### User Stories:
 
