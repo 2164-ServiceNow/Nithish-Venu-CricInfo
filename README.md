@@ -30,6 +30,13 @@ The Movie Information Hub is a single-page web application that allows users to 
 
 * As a user, I can filter search results by genre or release year, so that I can find movies that match my interests.
 
+
+**Development Environment Setup:**
+
+*   Detailed instructions for setting up the development environment (e.g., Node.js version, npm/yarn commands, AngularJS CLI commands if applicable).
+*   Precise steps to install all project dependencies.
+
+
 ### Collaborators:
 Venu Babu Peram  - [venubabuperam](https://github.com/venubabuperam)
 
