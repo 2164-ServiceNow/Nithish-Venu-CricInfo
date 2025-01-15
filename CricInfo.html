@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CricInfo</title>
+  <title>CricInfo Hub</title>
   <base href="/">
   <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
- 
+  
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
   <script src="app.js"></script>
- 
+  <script src="components/login/login.js"></script>
+  <script src="components/register/register.js"></script>
+  <script src="components/home/home.js"></script>
 </head>
-<body ng-app="CricInfoHub">
-  <div ng-view></div> 
+<body ng-app="CricInfo">
+  <div ng-view></div>
+  <div ng-controller="LoginController">
+    <link rel="stylesheet" href="./components/login/login.css">
+  </div>
+  <div ng-controller="RegisterController"></div>
+  <div ng-controller="HomeController"></div>
+
 </body>
 </html>

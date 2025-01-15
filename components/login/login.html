@@ -1,0 +1,56 @@
+<div>
+    <h1>Login</h1>
+    <form name="loginForm" ng-submit="login(credentials)" novalidate>
+      <!-- Email -->
+      <div>
+        <label>Email</label>
+        <input
+          type="email"
+          name="email"
+          ng-model="credentials.email"
+          placeholder="Email"
+          required
+        />
+        <span
+          ng-show="loginForm.email.$touched && loginForm.email.$error.required"
+          style="color: red;"
+        >
+          Email is required.
+        </span>
+        <span
+          ng-show="loginForm.email.$touched && loginForm.email.$error.email"
+          style="color: red;"
+        >
+          Invalid email address.
+        </span>
+      </div>
+  
+      <!-- Password -->
+      <div>
+        <label>Password</label>
+        <input
+          type="password"
+          name="password"
+          ng-model="credentials.password"
+          placeholder="Password"
+          required
+        />
+        <span
+          ng-show="loginForm.password.$touched && loginForm.password.$error.required"
+          style="color: red;"
+        >
+          Password is required.
+        </span>
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" ng-disabled="loginForm.$invalid">Login</button>
+    </form>
+  
+    <!-- Link to Register Page -->
+    <p>
+      Don't have an account?
+      <a href="/register">Register here</a>
+    </p>
+  </div>
+  

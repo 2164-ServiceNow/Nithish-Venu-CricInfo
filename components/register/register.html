@@ -1,0 +1,110 @@
+<link rel="stylesheet" href="./../register/register.css" >
+<div >
+    <h1>Signup</h1>
+    <form name="signupForm" ng-submit="signup(user)" novalidate>
+      <!-- First Name -->
+      <div>
+        <label>First Name</label>
+        <input 
+          type="text" 
+          name="firstName" 
+          ng-model="user.firstName" 
+          placeholder="First Name" 
+          required>
+        <span ng-show="signupForm.firstName.$touched && signupForm.firstName.$error.required" style="color: red;">
+          First Name is required.
+        </span>
+      </div>
+  
+      <!-- Last Name -->
+      <div>
+        <label>Last Name</label>
+        <input 
+          type="text" 
+          name="lastName" 
+          ng-model="user.lastName" 
+          placeholder="Last Name" 
+          required>
+        <span ng-show="signupForm.lastName.$touched && signupForm.lastName.$error.required" style="color: red;">
+          Last Name is required.
+        </span>
+      </div>
+  
+      <!-- Email -->
+      <div>
+        <label>Email</label>
+        <input 
+          type="email" 
+          name="email" 
+          ng-model="user.email" 
+          placeholder="Email" 
+          required
+          ng-change="checkEmail(user.eamil)">
+        <span ng-show="signupForm.email.$touched && signupForm.email.$error.required" style="color: red;">
+          Email is required.
+        </span>
+        <span ng-show="emailExists" style="color: red;">Email is already registered.</span>
+        <span ng-show="signupForm.email.$touched && signupForm.email.$error.email" style="color: red;">
+          Invalid email address.
+        </span>
+      </div>
+  
+      <!-- Phone Number -->
+      <div>
+        <label>Phone Number</label>
+        <input 
+          type="tel" 
+          name="phone" 
+          ng-model="user.phone" 
+          placeholder="Phone Number" 
+          ng-pattern="/^\d{10}$/"
+          required>
+        <span ng-show="signupForm.phone.$touched && signupForm.phone.$error.required" style="color: red;">
+          Phone Number is required.
+        </span>
+        <span ng-show="signupForm.phone.$touched && signupForm.phone.$error.pattern" style="color: red;">
+          Enter a valid 10-digit phone number.
+        </span>
+      </div>
+  
+      <!-- Password -->
+      <div>
+        <label>Password</label>
+        <input 
+          type="password" 
+          name="password" 
+          ng-model="user.password" 
+          placeholder="Password" 
+          ng-minlength="6" 
+          required>
+        <span ng-show="signupForm.password.$touched && signupForm.password.$error.required" style="color: red;">
+          Password is required.
+        </span>
+        <span ng-show="signupForm.password.$touched && signupForm.password.$error.minlength" style="color: red;">
+          Password must be at least 6 characters long.
+        </span>
+      </div>
+  
+      <!-- Confirm Password -->
+      <div>
+        <label>Confirm Password</label>
+        <input 
+          type="password" 
+          name="confirmPassword" 
+          ng-model="user.confirmPassword" 
+          placeholder="Confirm Password" 
+          match-password="user.password"
+          required>
+        <span ng-show="signupForm.confirmPassword.$touched && signupForm.confirmPassword.$error.required" style="color: red;">
+          Confirm Password is required.
+        </span>
+        <span ng-show="signupForm.confirmPassword.$error.matchPassword" style="color: red;">
+          Passwords do not match.
+        </span>
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" ng-disabled="signupForm.$invalid">Signup</button>
+    </form>
+  </div>
+  
