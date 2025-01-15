@@ -41,6 +41,9 @@ The CricInfo Hub is a single-page web application designed to provide real-time 
 *   for json server - 1. npm install -g json-server 
                       2. json-server --watch db.json
 
+    npm install express
+    node server.js
+
 
 ### Collaborators:
 Venu Babu Peram  - [venubabuperam](https://github.com/venubabuperam)
