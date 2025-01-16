@@ -11,7 +11,7 @@ app.controller('LoginController', function ($scope, $http, $location) {
               u.password === credentials.password
           );
           console.log(user);
-  
+ 
           if (user) {
             alert('Login successful!');
             // Redirect based on user type or other conditions
@@ -26,4 +26,4 @@ app.controller('LoginController', function ($scope, $http, $location) {
       );
     };
   });
-  
+ 

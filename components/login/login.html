@@ -1,56 +1,65 @@
-<div>
-    <h1>Login</h1>
-    <form name="loginForm" ng-submit="login(credentials)" novalidate>
-      <!-- Email -->
-      <div>
-        <label>Email</label>
-        <input
-          type="email"
-          name="email"
-          ng-model="credentials.email"
-          placeholder="Email"
-          required
-        />
-        <span
-          ng-show="loginForm.email.$touched && loginForm.email.$error.required"
-          style="color: red;"
-        >
-          Email is required.
-        </span>
-        <span
-          ng-show="loginForm.email.$touched && loginForm.email.$error.email"
-          style="color: red;"
-        >
-          Invalid email address.
-        </span>
-      </div>
-  
-      <!-- Password -->
-      <div>
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          ng-model="credentials.password"
-          placeholder="Password"
-          required
-        />
-        <span
-          ng-show="loginForm.password.$touched && loginForm.password.$error.required"
-          style="color: red;"
-        >
-          Password is required.
-        </span>
-      </div>
-  
-      <!-- Submit Button -->
-      <button type="submit" ng-disabled="loginForm.$invalid">Login</button>
-    </form>
-  
-    <!-- Link to Register Page -->
-    <p>
-      Don't have an account?
-      <a href="/register">Register here</a>
-    </p>
+
+
+<div class="login-page" ng-controller="LoginController">
+    <div class="form">
+      <h1>Login</h1>
+      <form name="loginForm" ng-submit="login(credentials)" novalidate>
+   
+        <!-- <lottie-player src="./../../assets/login-icon.json"  background="transparent"  speed="1"  style="justify-content: center;" loop  autoplay></lottie-player> -->
+   
+        <lottie-player src="./../../assets/login-icon.json"  background="transparent" speed="1" style="justify-content: center; margin-left: 20px;padding: 10px;margin-bottom:-90px;margin-top: -40px;" loop autoplay></lottie-player>
+   
+        <!-- Email -->
+        <div>
+          <label style="margin-right: 220px;">Email</label>
+          <input
+            type="email"
+            name="email"
+            ng-model="credentials.email"
+            placeholder="Email"
+            required
+          />
+          <span
+            ng-show="loginForm.email.$touched && loginForm.email.$error.required"
+            style="color: red;"
+          >
+            Email is required.
+          </span>
+          <span
+            ng-show="loginForm.email.$touched && loginForm.email.$error.email"
+            style="color: red;"
+          >
+            Invalid email address.
+          </span>
+        </div>
+   
+        <!-- Password -->
+        <div>
+          <label style="margin-right: 200px;">Password</label>
+          <input
+            type="password"
+            name="password"
+            ng-model="credentials.password"
+            placeholder="Password"
+            required
+          />
+          <span
+            ng-show="loginForm.password.$touched && loginForm.password.$error.required"
+            style="color: red;"
+          >
+            Password is required.
+          </span>
+        </div>
+   
+        <!-- Submit Button -->
+        <button type="submit" ng-disabled="loginForm.$invalid">Login</button>
+      </form>
+   
+      <!-- Links -->
+      <p>
+        Don't have an account?
+        <a ng-href="/register">Register here</a>
+        <a ng-href="/schedule">Schedule</a>
+      </p>
+    </div>
   </div>
-  

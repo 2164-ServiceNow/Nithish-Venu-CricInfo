@@ -5,22 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CricInfo Hub</title>
   <base href="/">
-  <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
+  <link rel="stylesheet" href="./components/schedule/schedule.css" type="text/css">
+  <link rel="stylesheet" href="./components/login/login.css" type="text/css">
+ <link rel="stylesheet" href="./components/register/register.css" type="text/css">
+ 
+ 
   
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
   <script src="app.js"></script>
   <script src="components/login/login.js"></script>
   <script src="components/register/register.js"></script>
   <script src="components/home/home.js"></script>
+  <script src="components/schedule/schedule.js"></script>
 </head>
 <body ng-app="CricInfo">
+  <!-- Content will be dynamically loaded here based on routes -->
   <div ng-view></div>
-  <div ng-controller="LoginController">
-    <link rel="stylesheet" href="./components/login/login.css">
-  </div>
-  <div ng-controller="RegisterController"></div>
-  <div ng-controller="HomeController"></div>
-
 </body>
 </html>

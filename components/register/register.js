@@ -1,4 +1,4 @@
-app.controller('RegisterController', function ($scope, $http) {
+app.controller('RegisterController', function ($scope, $http, $location) {
     $scope.signup = function (user) {
       if (user.password !== user.confirmPassword) {
         alert('Passwords do not match!');
@@ -22,6 +22,7 @@ app.controller('RegisterController', function ($scope, $http) {
                 $http.post('http://localhost:3000/users', user).then(
                   function (response) {
                     alert('Signup successful!');
+                    $location.path("/login")
                   },
                   function (error) {
                     console.error('Error while registering user:', error);

@@ -1,3 +1,22 @@
 {
-    "users": []
+  "users": [
+    {
+      "id": "101",
+      "firstName": "venu",
+      "lastName": "peram",
+      "email": "venu@gmail.com",
+      "phone": "8478374583",
+      "password": "Venu@16",
+      "confirmPassword": "Venu@16"
+    },
+    {
+      "id": "1011",
+      "firstName": "Nithish",
+      "lastName": "Babu",
+      "email": "cnithishbabu14@gmail.com",
+      "phone": "9845949859",
+      "password": "Nithish@16",
+      "confirmPassword": "Nithish@16"
+    }
+  ]
 }
