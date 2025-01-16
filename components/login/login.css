@@ -1,38 +1,47 @@
-/* styles.css */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
-
+ 
 body {
   /* Set the background image */
   background-image: url('./../../assets/1351279.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;  /* Center the image */
-  
+ 
   /* Optionally, you can also apply a gradient overlay on top of the image */
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./../../assets/1351279.png');
   background-size: cover;
-  background-position: center center;
+  background-position: center center; /* Center the image */
 }
-
+ 
 .login-page {
-  width: 560px;
-  padding: 2% 0 0;
-  margin: auto;
+  width: 660px;
+  padding: 2% 0 2%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  height: 300px;
+  
 }
-
+ 
 .form {
   position: relative;
   z-index: 1;
-  /* background: linear-gradient(135deg, #4CAF50, #41b71a); Gradient background */
-  background: whitesmoke;
-  max-width: 360px;
-  height: 900px;
+  background: #48c9b0;
+  max-width: 280px;
+  height: 500px;
   margin: 0 auto 100px;
   padding: 45px;
+  margin-bottom: 10px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  border-radius: 15px; /* Rounded corners for a softer look */
+  /* background-color: #f2f2f2; */
 }
+label{
+    font-family: "Titillium Web", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  
+}
+ 
 .form input {
   font-family: FontAwesome, "Roboto", sans-serif;
   outline: 0;
@@ -44,8 +53,9 @@ body {
   box-sizing: border-box;
   font-size: 14px;
   border-radius: 10px;
+  
 }
-
+ 
 .form button {
   font-family: "Titillium Web", sans-serif;
   font-size: 14px;
@@ -64,18 +74,18 @@ body {
   cursor: pointer;
   transition: all 0.2s;
 }
-
+ 
 .form button:hover, .form button:focus {
   background: #148f77;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-4px);
 }
-
+ 
 .form button:active {
   transform: translateY(2px);
   box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.2);
 }
-
+ 
 .form .message {
   margin: 6px 6px;
   color: #808080;
@@ -84,35 +94,35 @@ body {
   font-weight: bold;
   font-style: normal;
 }
-
+ 
 .form .message a {
   color: #FFFFFF;
   text-decoration: none;
   font-size: 13px;
 }
-
+ 
 .form .register-form {
   display: none;
 }
-
+ 
 .container {
   position: relative;
   z-index: 1;
   max-width: 300px;
   margin: 0 auto;
 }
-
+ 
 .container:before, .container:after {
   content: "";
   display: block;
   clear: both;
 }
-
+ 
 .container .info {
   margin: 50px auto;
   text-align: center;
 }
-
+ 
 .container .info h1 {
   margin: 0 0 15px;
   padding: 0;
@@ -120,17 +130,18 @@ body {
   font-weight: 300;
   color: #1a1a1a;
 }
-
+ 
 .container .info span {
   color: #4d4d4d;
   font-size: 12px;
 }
-
+ 
 .container .info span a {
   color: #000000;
   text-decoration: none;
 }
-
+ 
 .container .info span .fa {
   color: #EF3B3A;
 }
+ 

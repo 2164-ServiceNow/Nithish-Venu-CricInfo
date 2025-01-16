@@ -1,0 +1,88 @@
+.form-container {
+  width: 700px;
+  padding: 2%;
+  margin: 0 auto;
+  height: auto;
+  position: relative;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.lottie-player {
+  height: 100px;
+  width: 100px;
+}
+
+.form-header {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-right: 230px;
+}
+
+form {
+  background: #48c9b0;
+  padding: 45px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  text-align: left;
+ 
+
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+  margin-right: 60px;
+}
+
+.form-input {
+ 
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f2f2f2;
+  border: none;
+  border-radius: 10px;
+ 
+  
+  
+}
+
+.form-actions {
+  margin-top: 20px;
+}
+
+.submit-button {
+  max-width: 360px;
+  background: #17a589;
+  padding: 15px;
+  border-radius: 30px;
+  margin-left: 260px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: #148f77;
+  transform: translateY(-4px);
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.error-message{
+  color: rgb(182, 76, 67);
+ 
+}
