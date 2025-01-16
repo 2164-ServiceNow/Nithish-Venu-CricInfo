@@ -1,6 +1,12 @@
-<div>
+<div class="login-page" ng-controller="LoginController">
+  <div class="form">
     <h1>Login</h1>
     <form name="loginForm" ng-submit="login(credentials)" novalidate>
+
+      <!-- <lottie-player src="./../../assets/login-icon.json"  background="transparent"  speed="1"  style="justify-content: center;" loop  autoplay></lottie-player> -->
+
+      <lottie-player src="./../../assets/login-icon.json"  background="transparent" speed="1" style="justify-content: center; margin-left: 60px;" loop autoplay></lottie-player>
+
       <!-- Email -->
       <div>
         <label>Email</label>
@@ -24,7 +30,7 @@
           Invalid email address.
         </span>
       </div>
-  
+
       <!-- Password -->
       <div>
         <label>Password</label>
@@ -42,16 +48,16 @@
           Password is required.
         </span>
       </div>
-  
+
       <!-- Submit Button -->
       <button type="submit" ng-disabled="loginForm.$invalid">Login</button>
     </form>
-  
-    <!-- Link to Register Page -->
+
+    <!-- Links -->
     <p>
       Don't have an account?
       <a ng-href="/register">Register here</a>
-
+      <a ng-href="/schedule">Schedule</a>
     </p>
   </div>
-  
+</div>

@@ -21,6 +21,10 @@ app.config(function ($routeProvider, $locationProvider) {
       templateUrl: 'components/home/home.html',
       controller: 'HomeController',
     })
+    .when('/schedule', {
+      templateUrl: 'components/schedule/schedule.html',
+      controller: 'CricketController',
+    })
     .otherwise({
       redirectTo: '/login',
     });

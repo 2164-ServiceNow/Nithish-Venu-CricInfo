@@ -1,0 +1,36 @@
+<div ng-controller="CricketController">
+  <link rel="stylesheet" href="schedule.css" type="text/css">
+  <h1>International Cricket Schedule</h1>
+
+  <!-- Loading state or error message with Lottie animation -->
+  <div ng-if="!result" class="loading">
+    <!-- Lottie player for loading animation -->
+    <lottie-player 
+      src="./../../assets/loading2.json" 
+      background="transparent" 
+      speed="1.3" 
+      style="justify-content: center; width: 300px; height: 300px;" 
+      loop autoplay>
+    </lottie-player>
+    <p>Loading...</p> <!-- Optional text below Lottie animation -->
+  </div>
+
+  <!-- Schedules list -->
+  <div ng-if="result && schedules && schedules.length > 0" class="schedule-container">
+    <div ng-repeat="schedule in schedules" class="schedule-card">
+      <h2>{{ schedule.date }}</h2> <!-- Display the schedule date -->
+
+      <!-- Loop through matchList in each schedule -->
+      <div ng-repeat="match in schedule.matchList">
+        <h3>{{ match.seriesName }}</h3>
+        <p><strong>Match:</strong> {{ match.matchTitle }}</p>
+        <p><strong>Description:</strong> {{ match.matchDesc }}</p>
+        <p><strong>Venue:</strong> {{ match.venue }}</p>
+        <p><strong>Start Date:</strong> {{ match.startDate }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- If no result data is available -->
+  
+</div>

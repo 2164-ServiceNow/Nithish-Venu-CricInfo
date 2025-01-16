@@ -1,3 +1,31 @@
 {
-    "users": []
+  "users": [
+    {
+      "id": "101",
+      "firstName": "Venu",
+      "lastName": "Peram",
+      "email": "venubabu119@gmail.com",
+      "password": "123456",
+      "phone": "6301912209",
+      "confirmPassword": "123456"
+    },
+    {
+      "id": "102",
+      "firstName": "babu",
+      "lastName": "venu",
+      "email": "babu@gmail.com",
+      "phone": "9876543210",
+      "password": "123456",
+      "confirmPassword": "123456"
+    },
+    {
+      "id": "1011",
+      "firstName": "venu",
+      "lastName": "BABU",
+      "email": "venubabu19@gmail.com",
+      "phone": "6301912209",
+      "password": "123456",
+      "confirmPassword": "123456"
+    }
+  ]
 }
