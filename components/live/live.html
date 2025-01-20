@@ -1,0 +1,38 @@
+<div>
+    <h1>Live Cricket Scorecard</h1>
+    <div ng-if="matches.length" class="scorecard-grid">
+        <div class="scorecard" ng-repeat="match in matches">
+            <div class="scorecard-header">
+                <h2>{{ match.team1 }} vs {{ match.team2 }}</h2>
+                <p>{{ match.matchDesc }} - {{ match.seriesName }}</p>
+            </div>
+            <div class="scorecard-teams">
+                <!-- Team 1 -->
+                <div class="team-score">
+                    <h3>{{ match.team1 }}</h3>
+                    <p><strong>Runs:</strong> {{ match.team1Score.inngs1.runs }}</p>
+                    <p><strong>Wickets:</strong> {{ match.team1Score.inngs1.wickets }}</p>
+                    <p><strong>Overs:</strong> {{ match.team1Score.inngs1.overs }}</p>
+                </div>
+                <!-- Team 2 -->
+                <div class="team-score">
+                    <h3>{{ match.team2 }}</h3>
+                    <p><strong>Runs:</strong> {{ match.team2Score.inngs1.runs }}</p>
+                    <p><strong>Wickets:</strong> {{ match.team2Score.inngs1.wickets }}</p>
+                    <p><strong>Overs:</strong> {{ match.team2Score.inngs1.overs }}</p>
+                </div>
+            </div>
+            <div class="match-status">
+                <p><strong>Status:</strong> {{ match.status }}</p>
+                <p><strong>Venue:</strong> {{ match.venue }}, {{ match.city }}</p>
+                <p><strong>Start Date:</strong> {{ match.startDate }}</p>
+                <p><strong>State:</strong> {{ match.state }}</p>
+                
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="!matches.length">
+        <p>No live matches available at the moment.</p>
+    </div>
+</div>

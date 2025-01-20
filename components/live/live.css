@@ -1,0 +1,129 @@
+/* Scorecard Grid Container */
+.scorecard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Responsive grid layout */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Individual Scorecard Style */
+.scorecard {
+  background: linear-gradient(135deg, #ffffff, #e6f7ff); /* Gradient background */
+  border: 2px solid #00bcd4; /* Accent border color */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  animation: fadeIn 0.8s ease-in; /* Entry animation */
+}
+
+.scorecard:hover {
+  transform: scale(1.05); /* Hover effect: slightly enlarge */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  background: linear-gradient(135deg, #e0f7fa, #ffffff); /* Change background on hover */
+}
+
+/* Scorecard Header */
+.scorecard-header {
+  text-align: center;
+  margin-bottom: 15px;
+  background: #00bcd4; /* Highlighted header background */
+  color: #fff; /* White text */
+  padding: 10px;
+  border-radius: 8px;
+  animation: slideInFromTop 1s ease-out; /* Header slide-in animation */
+}
+
+.scorecard-header h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.scorecard-header p {
+  font-size: 16px;
+  margin: 5px 0 0;
+  color: #e0f7fa; /* Lighter shade for subtitle */
+}
+
+/* Team Scores */
+.scorecard-teams {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.team-score {
+  flex: 1;
+  text-align: center;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.team-score:hover {
+  background: #e0f7fa; /* Change background on hover */
+  transform: translateY(-5px); /* Subtle hover lift */
+}
+
+.team-score h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.team-score p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Match Status and Details */
+.match-status {
+  margin-top: 15px;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in;
+}
+
+.match-status p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #444;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .scorecard-grid {
+      grid-template-columns: 1fr; /* Stack the scorecards vertically on small screens */
+  }
+}

@@ -15,6 +15,7 @@ app.controller('CricketController', function($scope, $http) {
         // Handle success
         $scope.result = response.data; // Store the entire result in scope for debugging
         console.log(response.data); // Log the response for debugging
+        console.log(response.data.response); //
 
         // Check if we have valid schedules and match data
         if (response.data && response.data.response && response.data.response.schedules) {

@@ -12,11 +12,11 @@
       style="justify-content: center; width: 300px; height: 300px;" 
       loop autoplay>
     </lottie-player>
-    <p>Loading...</p> <!-- Optional text below Lottie animation -->
+    <!-- <p>Loading...</p> Optional text below Lottie animation -->
   </div>
 
   <!-- Schedules list -->
-  <div ng-if="result && schedules && schedules.length > 0" class="schedule-container">
+  <div class="schedule-container">
     <div ng-repeat="schedule in schedules" class="schedule-card">
       <h2>{{ schedule.date }}</h2> <!-- Display the schedule date -->
 

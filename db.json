@@ -44,6 +44,24 @@
       "phone": "6301912209",
       "password": "123456",
       "confirmPassword": "123456"
+    },
+    {
+      "id": "1011",
+      "firstName": "anand",
+      "lastName": "babu",
+      "email": "anand@gmail.com",
+      "phone": "9807773423",
+      "password": "123456",
+      "confirmPassword": "123456"
+    },
+    {
+      "id": "1011",
+      "firstName": "venu",
+      "lastName": "BABU",
+      "email": "venubabu189@gmail.com",
+      "phone": "6301912209",
+      "password": "123456",
+      "confirmPassword": "123456"
     }
   ]
 }
