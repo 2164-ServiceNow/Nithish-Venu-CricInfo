@@ -38,20 +38,26 @@
 //   });
 
 angular.module('mainpage', [])
-.controller('MainPageController', function ($location, $scope) {
-      var $ctrl = this;
+  .controller('MainPageController', function ($scope,$timeout) {
+    var $ctrl = this;
 
-      $ctrl.showComponent = '';
-      console.log("1."+$ctrl.showComponent); // Default component
+    // Default component
+    $ctrl.showComponent = 'schedule';
+    console.log("Initial Component: " + $ctrl.showComponent);
 
-      $ctrl.setActiveComponent = function (component) {
+    // Method to set active component
+    $ctrl.setActiveComponent = function (component) {
+      console.log("Changing to component: " + component);
+
+      $timeout(function () {
         $ctrl.showComponent = component;
-        
-        console.log('2'+$ctrl.showComponent+component); // Selected component
-        
-      };
+        $scope.$apply(); // Update the active component
+        console.log("Updated Component: " + $ctrl.showComponent);
+      });
+    };
 
-      $ctrl.logout = function () {
-        alert('Logged out successfully!');
-      };
-});
+    // Logout functionality
+    $ctrl.logout = function () {
+      alert('Logged out successfully!');
+    };
+  });

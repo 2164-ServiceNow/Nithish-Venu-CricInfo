@@ -32,7 +32,7 @@
 //     },
 //   });
 
-angular.module('schedulepage', [])
+app
   .component('schedule', {
     templateUrl: 'components/schedule/schedule.html',
     controller: function ($http,$scope) {

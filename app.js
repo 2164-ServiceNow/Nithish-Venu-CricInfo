@@ -1,4 +1,4 @@
-var app = angular.module('CricInfo', ['ngRoute', 'mainpage', 'schedulepage']);
+var app = angular.module('CricInfo', ['ngRoute', 'mainpage']);
 
 app.config(function ($routeProvider,$locationProvider) {
   $locationProvider.html5Mode({
