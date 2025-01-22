@@ -29,6 +29,10 @@ app.config(function ($routeProvider, $locationProvider) {
       templateUrl:'components/live/live.html',
       controller: 'LiveMatchesController',
     })
+    .when('/search', {
+      templateUrl: 'components/search/search.html',
+      controller: 'PlayerController',
+})
     .otherwise({
       redirectTo: '/login',
     });

@@ -1,0 +1,51 @@
+<div ng-controller="PlayerController">
+  <h1>Search Player Data</h1>
+
+  <!-- Search Bar -->
+  <input type="text" ng-model="searchQuery" placeholder="Enter player name" ng-change="searchPlayer()" class="search-bar">
+  
+  <button ng-click="searchPlayer()" ng-disabled="!searchQuery" class="search-btn">
+      Search
+  </button>
+
+  <div id="result" style="margin-top: 20px;">
+      <div ng-if="playerData && playerData.length > 0">
+          <div ng-repeat="player in playerData">
+              <h3>{{ player.name }}</h3>
+              <p><strong>Team:</strong> {{ player.teamName }}</p>
+              <p><strong>DOB:</strong> {{ player.dob }}</p>
+              <button ng-click="showPlayerProfile(player.id)" class="profile-btn">
+                  Show Profile
+              </button>
+          </div>
+      </div>
+
+      <div ng-if="errorMessage" style="color:red; margin-top: 20px;">
+          <p>{{errorMessage}}</p>
+      </div>
+  </div>
+
+  <!-- Display Player Profile Details -->
+  <div ng-if="playerProfile" style="margin-top: 20px;">
+      <h2>Player Profile</h2>
+      <p><strong>Name:</strong> {{ playerProfile.name }}</p>
+      <p><strong>Team:</strong> {{ playerProfile.teamName }}</p>
+      <p><strong>DOB:</strong> {{ playerProfile.dob }}</p>
+      <p><strong>Birthplace:</strong> {{ playerProfile.birthPlace }}</p>
+      <p><strong>Role:</strong> {{ playerProfile.role }}</p>
+      <p><strong>Batting Style:</strong> {{ playerProfile.bat }}</p>
+      <p><strong>Bowling Style:</strong> {{ playerProfile.bowl }}</p>
+      <p><strong>Bio:</strong></p>
+      <p ng-bind-html="playerProfile.bio"></p>
+      <img ng-src="{{ playerProfile.image }}" alt="{{ playerProfile.name }}" width="150">
+  
+      <!-- Dynamically list all remaining properties -->
+      <div>
+          <h3>Additional Details</h3>
+          <div ng-repeat="(key, value) in playerProfile">
+              <p><strong>{{ key }}:</strong> {{ value }}</p>
+          </div>
+      </div>
+  </div>
+  
+</div>
