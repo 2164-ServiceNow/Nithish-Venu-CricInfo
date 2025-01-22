@@ -15,7 +15,7 @@ app.controller('LoginController', function ($scope, $http, $location) {
           if (user) {
             alert('Login successful!');
             // Redirect based on user type or other conditions
-            $location.path('/home'); // Adjust the path as needed
+            $location.path('/main'); // Adjust the path as needed
           } else {
             alert('Invalid email or password.');
           }

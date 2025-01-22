@@ -1,4 +1,4 @@
-var app = angular.module('CricInfo', ['ngRoute']);
+var app = angular.module('CricInfo', ['ngRoute', 'mainpage', 'schedulepage']);
 
 app.config(function ($routeProvider,$locationProvider) {
   $locationProvider.html5Mode({
@@ -14,10 +14,15 @@ app.config(function ($routeProvider,$locationProvider) {
       templateUrl: 'components/register/register.html',
       controller: 'RegisterController',
     })
-    .when('/home',{
-        templateUrl: 'components/home/home.html',
-        controller: 'HomeController',
+    .when('/main',{
+        templateUrl: 'components/mainpage/mainpage.html',
+        controller: 'MainPageController as $ctrl',
     })
+    // .when('/main/schedule',{
+    //   templateUrl: 'components/schedule/schedule.html',
+    //   // controller: 'ScheduleController',
+    //   template: '<schedule></schedule>',
+    // })
     .otherwise({
       redirectTo: '/login',
     });
