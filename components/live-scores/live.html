@@ -1,38 +1,103 @@
-<div>
+<div ng-controller="LiveMatchesController">
+
     <h1>Live Cricket Scorecard</h1>
-    <div ng-if="matches.length" class="scorecard-grid">
-        <div class="scorecard" ng-repeat="match in matches">
+
+    <!-- List of Live Matches -->
+    <div class="scorecard-grid" ng-if="!selectedMatch && matches.length">
+        <div class="scorecard" ng-repeat="match in matches" ng-click="fetchScorecard(match.matchId)">
             <div class="scorecard-header">
                 <h2>{{ match.team1 }} vs {{ match.team2 }}</h2>
                 <p>{{ match.matchDesc }} - {{ match.seriesName }}</p>
-            </div>
-            <div class="scorecard-teams">
-                <!-- Team 1 -->
-                <div class="team-score">
-                    <h3>{{ match.team1 }}</h3>
-                    <p><strong>Runs:</strong> {{ match.team1Score.inngs1.runs }}</p>
-                    <p><strong>Wickets:</strong> {{ match.team1Score.inngs1.wickets }}</p>
-                    <p><strong>Overs:</strong> {{ match.team1Score.inngs1.overs }}</p>
-                </div>
-                <!-- Team 2 -->
-                <div class="team-score">
-                    <h3>{{ match.team2 }}</h3>
-                    <p><strong>Runs:</strong> {{ match.team2Score.inngs1.runs }}</p>
-                    <p><strong>Wickets:</strong> {{ match.team2Score.inngs1.wickets }}</p>
-                    <p><strong>Overs:</strong> {{ match.team2Score.inngs1.overs }}</p>
-                </div>
             </div>
             <div class="match-status">
                 <p><strong>Status:</strong> {{ match.status }}</p>
                 <p><strong>Venue:</strong> {{ match.venue }}, {{ match.city }}</p>
                 <p><strong>Start Date:</strong> {{ match.startDate }}</p>
-                <p><strong>State:</strong> {{ match.state }}</p>
-                
             </div>
         </div>
     </div>
 
-    <div ng-if="!matches.length">
+    <div class="no-matches" ng-if="!selectedMatch && !matches.length">
         <p>No live matches available at the moment.</p>
     </div>
+
+    <!-- Detailed Scorecard for Selected Match -->
+    <div class="match-details" ng-if="selectedMatch">
+        <h2>Match Details - {{ selectedMatch.team1 }} vs {{ selectedMatch.team2 }}</h2>
+        
+        <!-- Match Header -->
+        <div ng-if="scorecard.matchHeader">
+            <h3>{{ scorecard.matchHeader.seriesName }}</h3>
+            <p>{{ scorecard.matchHeader.matchDescription }}</p>
+            <p><strong>Status:</strong> {{ scorecard.matchHeader.status }}</p>
+            <p><strong>Start Date:</strong> {{ scorecard.matchHeader.matchStartTimestamp | date:'medium' }}</p>
+            <p><strong>Winner:</strong> {{ scorecard.matchHeader.result.winningTeam }}</p>
+        </div>
+
+        <!-- Scorecards -->
+        <div ng-if="scorecard.scoreCard.length">
+            <h3>Scorecard</h3>
+
+            <div class="innings" ng-repeat="inning in scorecard.scoreCard">
+                <h4>{{ inning.batTeamDetails.batTeamName }}</h4>
+                <p><strong>Extras:</strong> {{ inning.extrasData.total }}</p>
+                <p><strong>Overs:</strong> {{ inning.scoreDetails.overs }}</p>
+
+                <!-- Batsmen -->
+                <h4>Batsmen</h4>
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Batsman</th>
+                            <th>Runs</th>
+                            <th>Balls</th>
+                            <th>4s</th>
+                            <th>6s</th>
+                            <th>SR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="batsman in inning.batTeamDetails.batsmenData" class="table-row">
+                            <td>{{ batsman.batName }}</td>
+                            <td>{{ batsman.runs }}</td>
+                            <td>{{ batsman.balls }}</td>
+                            <td>{{ batsman.fours }}</td>
+                            <td>{{ batsman.sixes }}</td>
+                            <td>{{ batsman.strikeRate }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Bowlers -->
+                <h4>Bowlers</h4>
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Bowler</th>
+                            <th>Overs</th>
+                            <th>Maidens</th>
+                            <th>Runs</th>
+                            <th>Wickets</th>
+                            <th>Economy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="bowler in inning.bowlTeamDetails.bowlersData" class="table-row">
+                            <td>{{ bowler.bowlName }}</td>
+                            <td>{{ bowler.overs }}</td>
+                            <td>{{ bowler.maidens }}</td>
+                            <td>{{ bowler.runs }}</td>
+                            <td>{{ bowler.wickets }}</td>
+                            <td>{{ bowler.economy }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 CricApp. All rights reserved.</p>
+    </footer>
+
 </div>

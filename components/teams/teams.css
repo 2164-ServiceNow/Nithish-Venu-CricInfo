@@ -1,0 +1,135 @@
+.teams-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+   
+}
+
+.team-list {
+    flex: 1; /* Occupies 50% of the screen */
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+}
+
+
+
+h2 {
+    font-size: 2rem;
+    color: aqua;
+    text-align: center;
+}
+
+.loading, .error {
+    color: red;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.team-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 300px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.team-card:hover {
+    background-color: #f0f0f0;
+}
+
+.team-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+
+.team-bar img {
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 40px; /* Increased size */
+    height: 40px; /* Increased size */
+}
+
+.team-bar h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+}
+
+.team-bar p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+.team-players-container {
+    background: linear-gradient(135deg, #a0d2eb,#494d5f); /* Light blue background */
+    flex: 1; /* Occupies the remaining screen space */
+    padding: 150px;
+    padding-top: 30px; /* Add padding for spacing */
+    display: flex;
+    width: 500px;
+    
+    flex-direction: column;
+    justify-content: flex-start; /* Aligning content at the top */
+    align-items: center;
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.team-players-container h3 {
+    font-size: 3rem; /* Increased font size */
+    color: #333;
+    margin-bottom: 15px; /* Increased margin */
+    text-align: center;
+    border-bottom: 2px solid #ddd; /* Add underline for separation */
+    padding-bottom: 10px; /* Spacing below the title */
+}
+
+.team-players-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+.team-players-container li {
+    font-size: 1.2rem; /* Increased font size */
+    color: #555;
+    margin: 8px 0; /* Increased margin */
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* White background for individual items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Add padding for spacing */
+    width: 100%;
+    justify-content: flex-start; /* Aligning content at the start */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Add hover effect */
+}
+
+.team-players-container li:hover {
+    background-color: #f9f9f9; /* Slightly darker background on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.team-players-container li img {
+    margin-right: 15px; /* Increased spacing */
+    border-radius: 50%;
+    width: 40px; /* Increased size */
+    height: 40px; /* Increased size */
+    border: 2px solid #ddd; /* Add a border around images */
+}
+

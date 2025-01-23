@@ -51,7 +51,7 @@
 
 .right-section .btn-light {
     border: none;
-    color: #ffffff; /* Icon matches header theme */
+    color: #ef9191; /* Icon matches header theme */
     font-size: 1.2rem; /* Slightly larger icon */
 }
 
@@ -68,6 +68,14 @@
     background-color: #f5f5f5;
     color: #4caf50; /* Match hover color with header theme */
 }
+.dropdown-menu {
+    display: none;
+  }
+  
+  /* Show the dropdown when the 'show' class is added */
+  .dropdown-menu.show {
+    display: block;
+  }
 
 .app-icon{
     height: 45px; /* Smaller app icon size */

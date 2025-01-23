@@ -1,135 +1,132 @@
-/* Loading State - Adding a spinner animation */
-/* Style for the loading container */
-/* Style for the loading container */
 .loading {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #00796b;
-    padding: 20px;
-    position: fixed; /* Use fixed positioning to ensure it's centered relative to the viewport */
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* This will center the element */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px; /* You can adjust the height of the container */
-    width: 400px; /* You can adjust the width of the container */
-    /* background-color: #fff; */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #00796b;
+  padding: 20px;
+  position: fixed; /* Use fixed positioning to ensure it's centered relative to the viewport */
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* This will center the element */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* You can adjust the height of the container */
+  width: 400px; /* You can adjust the width of the container */
+  /* background-color: #fff; */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Optional text to indicate loading state */
+.loading-text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: #00796b;
+  font-weight: bold;
+}
+
+
+/* Optional text to indicate loading state */
+/* .loading-text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: #00796b;
+  font-weight: bold;
+} */
+
+
+/* Keyframes for loading spinner */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  /* Optional text to indicate loading state */
-  .loading-text {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.2rem;
-    color: #00796b;
-    font-weight: bold;
+  100% {
+    transform: rotate(360deg);
   }
-  
-  
-  /* Optional text to indicate loading state */
-  /* .loading-text {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.2rem;
-    color: #00796b;
-    font-weight: bold;
-  } */
-  
-  
-  /* Keyframes for loading spinner */
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+}
+
+/* Grid Layout for schedules */
+.schedule-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  margin-top: 40px;
+  animation: fadeIn 1s ease-out;
+}
+
+.schedule-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.schedule-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.schedule-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #00796b;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.schedule-card h3:hover {
+  color: #004d40;
+}
+
+.schedule-card p {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.schedule-card .match-title {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Animated fade-in effect for cards */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  /* Grid Layout for schedules */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
   .schedule-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 20px;
-    padding: 40px 20px;
-    margin-top: 40px;
-    animation: fadeIn 1s ease-out;
+    grid-template-columns: 1fr;
   }
-  
+
+  h1 {
+    font-size: 2rem;
+  }
+
   .schedule-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    padding: 15px;
   }
-  
-  .schedule-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .schedule-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #00796b;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-  
-  .schedule-card h3:hover {
-    color: #004d40;
-  }
-  
-  .schedule-card p {
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-  }
-  
-  .schedule-card .match-title {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  /* Animated fade-in effect for cards */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsive Media Queries */
-  @media (max-width: 768px) {
-    .schedule-container {
-      grid-template-columns: 1fr;
-    }
-  
-    h1 {
-      font-size: 2rem;
-    }
-  
-    .schedule-card {
-      padding: 15px;
-    }
-  }
-  
-  /* Smooth Scroll for the page */
-  html {
-    scroll-behavior: smooth;
-  }
+}
+
+/* Smooth Scroll for the page */
+html {
+  scroll-behavior: smooth;
+}

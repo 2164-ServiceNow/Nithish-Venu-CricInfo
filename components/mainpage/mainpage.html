@@ -19,36 +19,52 @@
             <button class="btn btn-outline-secondary" ng-click="$ctrl.showComponent('about')">About</button>
             <button class="btn btn-outline-success" ng-click="$ctrl.showComponent('contact')">Contact</button> -->
             <button class="btn btn-outline-primary" ng-click="$ctrl.setActiveComponent('schedule')">Schedule</button>
-            <button class="btn btn-outline-secondary" ng-click="$ctrl.setActiveComponent('live')">Live Scores</button>
-            <!--<button class="btn btn-outline-success" ng-click="$ctrl.setActiveComponent('contact')">Contact</button> -->
+            <button class="btn btn-outline-secondary" ng-click="$ctrl.setActiveComponent('live')">Live Matches</button>
+            <button class="btn btn-outline-secondary" ng-click="$ctrl.setActiveComponent('teams')">Teams</button>
+            <button class="btn btn-outline-success" ng-click="$ctrl.setActiveComponent('player')">Players</button> 
+            <button class="btn btn-outline-success" ng-click="$ctrl.setActiveComponent('news')">News</button>
 
         </div>
 
         <!-- Right Section: Logout Dropdown -->
-        <div class="right-section dropdown">
-            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-user"></i> <!-- Font Awesome User Icon -->
-            </button>
-            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="" ng-click="$ctrl.logout()">Logout</a></li>
-            </ul>
+        <div class="right-section">
+          <button class="btn btn-light" type="button" ng-click="$ctrl.toggleDropdown()">
+            <i class="fas fa-user"></i>
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+          </button>
+          <!-- Dropdown Menu -->
+          <ul class="dropdown-menu" ng-class="{'show': $ctrl.isDropdownVisible}" aria-labelledby="dropdownMenuButton">
+        
+            <li><a class="dropdown-item" href="" ng-click="$ctrl.logout()">Logout</a></li>
+          </ul>
         </div>
     </div>
 </nav>
 <!-- <schedule></schedule> -->
 <div class="container-fluid mt-4">
-  <div>
-    <p>Current Component: {{$ctrl.showComponent}}</p>
-  </div>
+  
   <div ng-switch="$ctrl.showComponent">
-    <p>{{$ctrl.showComponent}}</p>
+    
     <div ng-switch-when="schedule">
       <schedule></schedule>
     </div>
     <div ng-switch-when="live">
-      <p>{{$ctrl.showComponent}}</p>
+      
       <live></live>
     </div>
+    <div ng-switch-when="teams">
+      
+      <teams></teams>
+    </div>
+    <div ng-switch-when="news">
+      
+      <news></news>
+    </div>
+    <div ng-switch-when="player">
+      
+      <player></player>
+    </div>
+
     
   </div>
     <!-- <div ng-if="$ctrl.showComponent === 'contact'">

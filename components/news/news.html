@@ -1,0 +1,27 @@
+<div class="news-container">
+    <h2>Latest News</h2>
+
+    <!-- Loading Indicator -->
+    <div ng-if="isLoading" class="loading-message">
+        Loading news articles, please wait...
+    </div>
+
+    <!-- Error Message -->
+    <div ng-if="error" class="error-message">
+        {{ error }}
+    </div>
+
+    <!-- News Articles -->
+    <div ng-if="!isLoading && !error">
+        <div class="news-card" ng-repeat="article in newsArticles">
+            
+            <div class="news-content">
+                <h5>{{ article.title }}</h5>
+                <h3>{{ article.headline }}</h3>
+                <p>{{article.intro}}</p>
+
+                <p class="published-date">Published at: {{ article.publishedAt | date:'medium' }}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<!-- <div class="teams-container">
+    <h2>International Teams</h2>
+    <div ng-if="isLoading" class="loading">Loading teams...</div>
+    <div ng-if="error" class="error">{{error}}</div>
+    <div ng-if="!isLoading && !error" class="team-container">
+        <div ng-repeat="team in teams" class="team-card" ng-click="loadTeamPlayers(team)">
+            <img ng-src="https://static.cricbuzz.com/a/img/v1/172x172/i1/c{{team.imageId}}/{{team.teamName}}.jpg" alt="{{team.teamName}}">
+            <h3>{{team.teamName}}</h3>
+            <p>{{team.teamSName}}</p>
+        </div>
+    </div> -->
+
+    <!-- Team Players List -->
+    <!-- <div class="team-players-container" ng-if="selectedTeamPlayers">
+        <div class="team-players-header">
+            <h3>Players in {{selectedTeamName}}</h3>
+        </div>
+        <ul class="team-players-list">
+            <li ng-repeat="player in selectedTeamPlayers">
+                <img ng-src="https://static.cricbuzz.com/a/img/v1/172x172/i1/c{{player.imageId}}/{{player.name}}.jpg" alt="{{player.name}}">
+                <span>{{player.name}}</span>
+            </li>
+        </ul>
+    </div>
+</div> -->
+<div class="teams-container">
+    <!-- Left Side: Team List -->
+    <div class="team-list">
+        <h2>Teams</h2>
+        <p class="loading" ng-if="loading">Loading teams...</p>
+        <p class="error" ng-if="error">{{error}}</p>
+
+        <div class="team-container">
+            <div 
+                class="team-card" 
+                ng-repeat="team in teams" 
+                ng-click="loadTeamPlayers(team)"
+            >
+                <div class="team-bar">
+                    <img ng-src="https://static.cricbuzz.com/a/img/v1/172x172/i1/c{{team.imageId}}/{{team.teamName}}.jpg" alt="{{team.teamName}}">
+                    <h3>{{team.teamName}}</h3>
+                    <p>{{team.teamSName}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Side: Selected Team Players -->
+    <div class="team-players-container" ng-if="selectedTeamPlayers">
+        <h3>Players in {{selectedTeamName}}</h3>
+        <ul>
+            <li ng-repeat="player in selectedTeamPlayers">
+                <img ng-src="https://static.cricbuzz.com/a/img/v1/172x172/i1/c{{player.imageId}}/{{player.name}}.jpg" alt="{{player.name}}">
+                <span>{{player.name}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

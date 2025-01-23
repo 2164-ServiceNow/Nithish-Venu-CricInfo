@@ -38,7 +38,7 @@
 //   });
 
 angular.module('mainpage', [])
-  .controller('MainPageController', function ($scope,$timeout) {
+  .controller('MainPageController', function ($scope,$timeout,$location) {
     var $ctrl = this;
 
     // Default component
@@ -55,9 +55,15 @@ angular.module('mainpage', [])
         console.log("Updated Component: " + $ctrl.showComponent);
       });
     };
+    $ctrl.isDropdownVisible = true;
+    $ctrl.toggleDropdown = function () {
+      $ctrl.isDropdownVisible = !$ctrl.isDropdownVisible;
+    };
+
 
     // Logout functionality
     $ctrl.logout = function () {
+      $location.path("/login");
       alert('Logged out successfully!');
     };
   });
