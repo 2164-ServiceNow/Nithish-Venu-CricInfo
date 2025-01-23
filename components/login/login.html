@@ -1,15 +1,16 @@
 
 
 <div class="login-page" ng-controller="LoginController">
+ 
+
   <div class="form">
     <h1>Login</h1>
     <form name="loginForm" ng-submit="login(credentials)" novalidate>
  
-      <!-- <lottie-player src="./../../assets/login-icon.json"  background="transparent"  speed="1"  style="justify-content: center;" loop  autoplay></lottie-player> -->
- 
+      
       <lottie-player src="./../../assets/login-icon.json"  background="transparent" speed="1" style="justify-content: center; margin-left: 20px;padding: 10px;margin-bottom:-90px;margin-top: -40px;" loop autoplay></lottie-player>
  
-      <!-- Email -->
+
       <div>
         <label style="margin-right: 220px;">Email</label>
         <input
@@ -33,7 +34,7 @@
         </span>
       </div>
  
-      <!-- Password -->
+
       <div>
         <label style="margin-right: 200px;">Password</label>
         <input
@@ -51,17 +52,18 @@
         </span>
       </div>
  
-      <!-- Submit Button -->
       <button type="submit" ng-disabled="loginForm.$invalid">Login</button>
     </form>
  
-    <!-- Links -->
+
     <p>
       Don't have an account?
       <a ng-href="/register">Register here</a>
       <a ng-href="/schedule">Schedule</a>
       <a ng-href="/live">live score</a>
       <a ng-href="/search">Search here</a>
+      <a ng-href="/rank">Rank</a>
     </p>
   </div>
 </div>
+
