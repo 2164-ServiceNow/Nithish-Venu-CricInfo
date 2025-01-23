@@ -33,6 +33,10 @@ app.config(function ($routeProvider, $locationProvider) {
       templateUrl: 'components/search/search.html',
       controller: 'PlayerController',
 })
+// .when('/main',{
+//   templateUrl: 'components/main/main.html',
+//   controller: 'MainPageController as $ctrl',
+// })
     .otherwise({
       redirectTo: '/login',
     });

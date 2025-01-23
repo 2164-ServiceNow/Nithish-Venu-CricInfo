@@ -87,16 +87,16 @@ app.controller('CricketController', function($scope, $http, $interval) {
   }
 
   // Fetch initial data
-  fetchData();
+  // fetchData();
 
-  // Refresh the data every 60 seconds (60000 milliseconds)
-  $interval(fetchData, 60000);
+  // // Refresh the data every 60 seconds (60000 milliseconds)
+  // $interval(fetchData, 60000);
 
-  // Cleanup interval when the controller is destroyed
-  $scope.$on('$destroy', function() {
-    if (angular.isDefined(fetchData)) {
-      $interval.cancel(fetchData); // Cancel the interval on controller destruction
-    }
-  });
+  // // Cleanup interval when the controller is destroyed
+  // $scope.$on('$destroy', function() {
+  //   if (angular.isDefined(fetchData)) {
+  //     $interval.cancel(fetchData); // Cancel the interval on controller destruction
+  //   }
+  // });
 
 });

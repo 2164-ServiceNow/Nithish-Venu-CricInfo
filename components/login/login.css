@@ -2,13 +2,13 @@
  
 body {
   /* Set the background image */
-  background-image: url('./../../assets/1351279.png');
+  /* background-image: url('./../../assets/1351279.png'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;  /* Center the image */
  
   /* Optionally, you can also apply a gradient overlay on top of the image */
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./../../assets/1351279.png');
+  /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./../../assets/1351279.png'); */
   background-size: cover;
   background-position: center center; /* Center the image */
 }
