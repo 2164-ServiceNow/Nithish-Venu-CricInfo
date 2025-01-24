@@ -22,7 +22,7 @@ The CricInfo Hub is a single-page web application designed to provide real-time 
 
 * As a user, I want to search for detailed player statistics, including runs, wickets, and rankings.
 
-*As a user, I want to view a list of teams and their respective players, so I can easily explore team compositions and details
+* As a user, I want to view a list of teams and their respective players, so I can easily explore team compositions and details
   
 * As a user, I want to see team rankings and player rankings across formats, so I can compare my favorite teams.
 
