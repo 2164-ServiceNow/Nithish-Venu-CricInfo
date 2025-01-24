@@ -1,0 +1,25 @@
+<div ng-controller="HomeController" class="home-container">
+    <!-- Sliding Banner -->
+    <div class="sliding-banner">
+      <div class="slide" 
+           ng-repeat="image in $ctrl.bannerImages track by $index" 
+           ng-class="{'active': $index === $ctrl.activeSlide}" 
+           ng-style="{'background-image': 'url(' + image + ')'}">
+      </div>
+    </div>
+  
+    <!-- About Section -->
+    <div class="about-section">
+      <h1>Welcome to CricInfo</h1>
+      <p>
+        CricInfo is your ultimate destination for all things cricket! Stay updated with live scores, match updates, 
+        player statistics, and exciting cricket news from around the world. Whether it's the thrill of T20s, 
+        the strategy of ODIs, or the passion of Test matches, we bring the world of cricket to your fingertips.
+      </p>
+      <p>
+        Follow your favorite teams, track match schedules, and relive unforgettable moments in cricket history 
+        right here on CricInfo. Let’s celebrate the gentleman’s game together!
+      </p>
+    </div>
+  </div>
+  

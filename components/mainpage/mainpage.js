@@ -38,11 +38,11 @@
 //   });
 
 angular.module('mainpage', [])
-  .controller('MainPageController', function ($scope,$timeout,$location) {
+  .controller('MainPageController', function ($scope,AuthService,$timeout,$location) {
     var $ctrl = this;
 
     // Default component
-    $ctrl.showComponent = 'schedule';
+    $ctrl.showComponent = 'home';
     console.log("Initial Component: " + $ctrl.showComponent);
 
     // Method to set active component
@@ -63,6 +63,7 @@ angular.module('mainpage', [])
 
     // Logout functionality
     $ctrl.logout = function () {
+      AuthService.logout();
       $location.path("/login");
       alert('Logged out successfully!');
     };

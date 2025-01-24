@@ -1,0 +1,51 @@
+<div ng-controller="RankingsController">
+  <div class="container">
+    
+    <h1>ICC Cricket Rankings</h1>
+    <div class="format-buttons">
+      <!-- Player Rankings Buttons -->
+      <button ng-class="{'active-button': selectedButton === 'batsmen_t20'}" ng-click="selectButton('batsmen_t20'); fetchRankings('batsmen', 't20')">T20 Batsmen</button>
+      <button ng-class="{'active-button': selectedButton === 'bowlers_t20'}" ng-click="selectButton('bowlers_t20'); fetchRankings('bowlers', 't20')">T20 Bowlers</button>
+      <button ng-class="{'active-button': selectedButton === 'allrounders_t20'}" ng-click="selectButton('allrounders_t20'); fetchRankings('allrounders', 't20')">T20 All-Rounders</button>
+      <button ng-class="{'active-button': selectedButton === 'batsmen_odi'}" ng-click="selectButton('batsmen_odi'); fetchRankings('batsmen', 'odi')">ODI Batsmen</button>
+      <button ng-class="{'active-button': selectedButton === 'bowlers_odi'}" ng-click="selectButton('bowlers_odi'); fetchRankings('bowlers', 'odi')">ODI Bowlers</button>
+      <button ng-class="{'active-button': selectedButton === 'allrounders_odi'}" ng-click="selectButton('allrounders_odi'); fetchRankings('allrounders', 'odi')">ODI All-Rounders</button>
+      <button ng-class="{'active-button': selectedButton === 'batsmen_test'}" ng-click="selectButton('batsmen_test'); fetchRankings('batsmen', 'test')">Test Batsmen</button>
+      <button ng-class="{'active-button': selectedButton === 'bowlers_test'}" ng-click="selectButton('bowlers_test'); fetchRankings('bowlers', 'test')">Test Bowlers</button>
+      <button ng-class="{'active-button': selectedButton === 'allrounders_test'}" ng-click="selectButton('allrounders_test'); fetchRankings('allrounders', 'test')">Test All-Rounders</button>
+
+      <!-- Team Rankings Buttons -->
+      <button ng-class="{'active-button': selectedButton === 'teams_t20'}" ng-click="selectButton('teams_t20'); fetchTeamRankings('t20')">T20 Team Rankings</button>
+      <button ng-class="{'active-button': selectedButton === 'teams_odi'}" ng-click="selectButton('teams_odi'); fetchTeamRankings('odi')">ODI Team Rankings</button>
+      <button ng-class="{'active-button': selectedButton === 'teams_test'}" ng-click="selectButton('teams_test'); fetchTeamRankings('test')">Test Team Rankings</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th ng-if="isTeamRanking">Team</th>
+          <th ng-if="!isTeamRanking">Player</th>
+          <th ng-if="!isTeamRanking">Country</th>
+          <th>Rating</th>
+          <!-- <th ng-if="!isTeamRanking">Trend</th> -->
+          <th ng-if="isTeamRanking">Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in rankings">
+          <td>{{ item.rank }}</td>
+          <td>
+            <img  ng-src="{{ item.imageUrl }}" alt="{{ item.name }}" />
+            {{ item.name }}
+          </td>
+          
+          
+      <td ng-if="!isTeamRanking">{{ item.country }}</td>
+          <td>{{ item.rating }}</td>
+          <td ng-if="isTeamRanking">{{ item.points }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

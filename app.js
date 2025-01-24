@@ -28,6 +28,40 @@ app.config(function ($routeProvider,$locationProvider) {
     });
     
 });
+app.service('AuthService', function($window) {
+  this.login = function() {
+    $window.localStorage.setItem('isAuthenticated', 'true');
+  };
+
+  this.logout = function() {
+    $window.localStorage.removeItem('isAuthenticated');
+  };
+
+  this.isLoggedIn = function() {
+    return $window.localStorage.getItem('isAuthenticated') === 'true';
+  };
+});
+
+
+app.run(function($rootScope, $location, AuthService) {
+  $rootScope.$on('$routeChangeStart', function(event, next, current) {
+    const restrictedRoutes = ['/main']; // Routes requiring authentication
+    const publicRoutes = ['/login']; // Routes accessible without authentication
+
+    if (restrictedRoutes.includes(next.originalPath) && !AuthService.isLoggedIn()) {
+      // Prevent access to restricted routes if not logged in
+      event.preventDefault();
+      $location.path('/login');
+    } else if (publicRoutes.includes(next.originalPath) && AuthService.isLoggedIn()) {
+      // Redirect logged-in users away from the login page
+      event.preventDefault();
+      $location.path('/main');
+    }
+  });
+});
+
+
+
 
 app.directive('matchPassword', function() {
     return {

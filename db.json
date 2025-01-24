@@ -17,6 +17,15 @@
       "phone": "9845949859",
       "password": "Nithish@16",
       "confirmPassword": "Nithish@16"
+    },
+    {
+      "id": "1011",
+      "firstName": "venu",
+      "lastName": "babu",
+      "email": "Venu@gmail.com",
+      "phone": "9804450453",
+      "password": "123456",
+      "confirmPassword": "123456"
     }
   ]
 }

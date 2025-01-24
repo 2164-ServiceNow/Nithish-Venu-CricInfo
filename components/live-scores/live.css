@@ -20,7 +20,7 @@ h1 {
 
 /* Scorecard */
 .scorecard {
-    background: linear-gradient(135deg, #a0d2eb,#494d5f);
+    background: linear-gradient(135deg, #a0d2eb,#8598ec);
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -37,7 +37,7 @@ h1 {
 
 /* Scorecard Header */
 .scorecard-header {
-    background: linear-gradient(135deg, #76b852, #8dc26f);
+    background: linear-gradient(135deg, #bdddfc, #88bdf2);
     color: white;
     padding: 15px;
     border-bottom: 2px solid #5e9d45;
