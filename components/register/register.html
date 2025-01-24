@@ -1,0 +1,145 @@
+<div class="form-container">
+    <!-- <div class="header-container">
+      <lottie-player 
+        src="./../../assets/register-icon.json" 
+        background="transparent" 
+        speed="1" 
+        class="lottie-player" 
+        loop autoplay>
+      </lottie-player>
+      <h1 class="form-header">Sign Up</h1>
+    </div> -->
+    <form name="signupForm" ng-submit="signup(user)" novalidate>
+        <div class="header-container">
+            <lottie-player 
+              src="./../../assets/register-icon.json" 
+              background="transparent" 
+              speed="1" 
+              class="lottie-player" 
+              loop autoplay>
+            </lottie-player>
+            <h1 class="form-header">Sign Up</h1>
+          </div>
+      <div class="form-row">
+        <!-- First Name -->
+        <div class="form-group">
+          <label class="form-label">First Name</label>
+          <div><input 
+            type="text" 
+            name="firstName" 
+            class="form-input" 
+            ng-model="user.firstName" 
+            placeholder="First Name" 
+            required></div>
+          <span ng-show="signupForm.firstName.$touched && signupForm.firstName.$error.required" class="error-message">
+            First Name is required.
+          </span>
+        </div>
+  
+        <!-- Last Name -->
+        <div class="form-group">
+          <label class="form-label">Last Name</label>
+          <div><input 
+            type="text" 
+            name="lastName" 
+            class="form-input" 
+            ng-model="user.lastName" 
+            placeholder="Last Name" 
+            required></div>
+          <span ng-show="signupForm.lastName.$touched && signupForm.lastName.$error.required" class="error-message">
+            Last Name is required.
+          </span>
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <!-- Email -->
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <div><input 
+            type="email" 
+            name="email" 
+            class="form-input" 
+            ng-model="user.email" 
+            placeholder="Email" 
+            required></div>
+          <span ng-show="signupForm.email.$touched && signupForm.email.$error.required" class="error-message">
+            Email is required.
+          </span>
+          <span ng-show="signupForm.email.$touched && signupForm.email.$error.email" class="error-message">
+            Invalid email address.
+          </span>
+        </div>
+  
+        <!-- Phone Number -->
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <div><input 
+            type="tel" 
+            name="phone" 
+            class="form-input" 
+            ng-model="user.phone" 
+            placeholder="Phone Number" 
+            ng-pattern="/^\d{10}$/"
+            required></div>
+          <span ng-show="signupForm.phone.$touched && signupForm.phone.$error.required" class="error-message">
+            Phone Number is required.
+          </span>
+          <span ng-show="signupForm.phone.$touched && signupForm.phone.$error.pattern" class="error-message">
+            Enter a valid 10-digit phone number.
+          </span>
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <!-- Password -->
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <div><input 
+            type="password" 
+            name="password" 
+            class="form-input" 
+            ng-model="user.password" 
+            placeholder="Password" 
+            ng-minlength="6" 
+            required></div>
+          <span ng-show="signupForm.password.$touched && signupForm.password.$error.required" class="error-message">
+            Password is required.
+          </span>
+          <span ng-show="signupForm.password.$touched && signupForm.password.$error.minlength" class="error-message">
+            Password must be at least 6 characters long.
+          </span>
+        </div>
+  
+        <!-- Confirm Password -->
+        <div class="form-group">
+          <label class="form-label">Confirm Password</label>
+          <div><input 
+            type="password" 
+            name="confirmPassword" 
+            class="form-input" 
+            ng-model="user.confirmPassword" 
+            placeholder="Confirm Password" 
+            required></div>
+          <span ng-show="signupForm.confirmPassword.$touched && signupForm.confirmPassword.$error.required" class="error-message">
+            Confirm Password is required.
+          </span>
+          <span ng-show="signupForm.confirmPassword.$error.matchPassword" class="error-message">
+            Passwords do not match.
+          </span>
+        </div>
+      </div>
+  
+      <!-- Submit Button -->
+      <div class="form-actions">
+        <button type="submit" class="submit-button" ng-disabled="signupForm.$invalid">Sign Up</button>
+       
+      </div>
+      <p style="margin-left: 200px ;">
+        Already have an account?
+        <a ng-href="/login">Login</a>
+      
+      </p>
+    </form>
+  </div>
+  

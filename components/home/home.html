@@ -1,0 +1,49 @@
+<div class="home-container">
+  <!-- Sliding Banner -->
+  <div class="sliding-banner">
+    <div class="slide"
+         ng-repeat="image in $ctrl.bannerImages track by $index"
+         ng-class="{'active': $index === $ctrl.activeSlide}"
+         ng-style="{'background-image': 'url(' + image + ')'}">
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="about-section">
+    <h1>Welcome to CricInfo</h1>
+    <p>
+      CricInfo is the ultimate destination for cricket enthusiasts. Whether you're a casual fan or a die-hard supporter,
+      our platform provides live scores, in-depth statistics, and news from the world of cricket.
+      From T20 leagues to Test matches, we have it all covered.
+    </p>
+    <h2>What We Offer</h2>
+    <ul>
+      <li>Live match scores and updates</li>
+      <li>Player statistics and profiles</li>
+      <li>Cricket news and analysis</li>
+      <li>Upcoming match schedules and team rankings</li>
+      <li>Player Rankings and more!</li>
+    </ul>
+  </div>
+
+  <!-- Cricket History Section -->
+  <div class="history-section">
+    <h2>Cricket History</h2>
+    <p>
+      Cricket, often referred to as "the gentleman's game," has a rich and storied history.
+      Originating in the 16th century in England, it has become one of the most popular sports in the world,
+      with millions of fans across the globe. The game has evolved over time, from its early days of village cricket
+      to the exciting formats we see today, including the fast-paced T20 matches, the 50-over One-Day Internationals (ODIs),
+      and the traditional Test matches.
+    </p>
+    <p>
+      Some of the greatest moments in sports history have occurred on a cricket field, from iconic players like
+      Sachin Tendulkar, Brian Lara, and Sir Donald Bradman to thrilling World Cup finals and record-breaking feats.
+    </p>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2025 CricInfo. All rights reserved.</p>
+  </footer>
+</div>

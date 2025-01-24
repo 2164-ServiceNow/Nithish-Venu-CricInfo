@@ -1,0 +1,93 @@
+<div ng-controller="PlayerController" class="card-holder" >
+    <h1>Search Player Data</h1>
+  
+    <!-- Search Bar -->
+    <input type="text" ng-model="searchQuery" placeholder="Enter player name" ng-change="searchPlayer()" class="search-bar">
+    
+    <button ng-click="searchPlayer()" ng-disabled="!searchQuery" class="search-btn">
+        Search
+    </button>
+  
+    <div id="result" style="margin-top: 20px;" class="bg-spring" >
+        <!-- Display List of Players -->
+        <div ng-if="playerData && playerData.length > 0">
+            <div class="player-card" ng-repeat="player in playerData">
+                <img ng-src="{{ 'https://www.cricbuzz.com/a/img/v1/600x600/i1/c' + player.faceImageId + '/player.jpg' }}" alt="{{ player.name }}">
+                <div>
+                    <h3>{{ player.name }}</h3>
+                    <p><strong>Team:</strong> {{ player.teamName }}</p>
+                    <p><strong>DOB:</strong> {{ player.dob }}</p>
+                </div>
+                <button ng-click="showPlayerProfile(player.id)" class="profile-btn">
+                    Show Profile
+                </button>
+            </div>
+        </div>
+  
+        <!-- Display Error Message -->
+        <div ng-if="errorMessage" style="color:red; margin-top: 20px;">
+            <p>{{errorMessage}}</p>
+        </div>
+    </div>
+    <div ng-if="playerProfile" class="player-profile" >
+        <h2 class="profile-title">{{ playerProfile.name }}</h2>
+        <h4 class="profile-subtitle">{{ playerProfile.intlTeam }}</h4>
+        <div class="profile-container"class="bg-spring">
+            <!-- Player Image -->
+            <div class="profile-image">
+                <img ng-src="{{ 'https://www.cricbuzz.com/a/img/v1/600x600/i1/c' + playerProfile.faceImageId + '/player.jpg' }}" alt="{{ playerProfile.name }}" class="player-photo">
+            </div>
+    
+            <!-- Player Details -->
+            <table class="profile-table">
+                <tbody>
+                    <tr>
+                        <th>Born</th>
+                        <td>{{ playerProfile.DoB }}</td>
+                    </tr>
+                    <tr>
+                        <th>Birth Place</th>
+                        <td>{{ playerProfile.birthPlace }}</td>
+                    </tr>
+                    <tr>
+                        <th>Height</th>
+                        <td>{{ playerProfile.height || '--' }}</td>
+                    </tr>
+                    <tr>
+                        <th>Role</th>
+                        <td>{{ playerProfile.role }}</td>
+                    </tr>
+                    <tr>
+                        <th>Batting Style</th>
+                        <td>{{ playerProfile.bat }}</td>
+                    </tr>
+                    <tr>
+                        <th>Bowling Style</th>
+                        <td>{{ playerProfile.bowl }}</td>
+                    </tr>
+                    <tr>
+                        <th>ICC Batting Rankings</th>
+                        <td>
+                            <strong>Test:</strong> {{ playerProfile.rankings.bat.testRank || '--' }}<br>
+                            <strong>ODI:</strong> {{ playerProfile.rankings.bat.odiBestRank || '--' }}<br>
+                            <strong>T20:</strong> {{ playerProfile.rankings.bat.t20BestRank || '--' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>ICC Bowling Rankings</th>
+                        <td>
+                            <strong>Test:</strong> {{ playerProfile.rankings.bowl.testBestRank || '--' }}<br>
+                            <strong>ODI:</strong> {{ playerProfile.rankings.bowl.odiBestRank || '--' }}<br>
+                            <strong>T20:</strong> {{ playerProfile.rankings.bowl.t20BestRank || '--' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Teams</th>
+                        <td>{{ playerProfile.teams }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>

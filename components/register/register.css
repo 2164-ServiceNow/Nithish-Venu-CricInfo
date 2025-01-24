@@ -1,0 +1,97 @@
+.form-container {
+  width: 100%; /* Make it full-width */
+  height: 100vh; /* Full height of the viewport */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Reset padding */
+  background-image: url("/assets/back.jpg");
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  background-attachment: fixed; /* Fix the background for a parallax effect */
+  display: flex; /* Use Flexbox for centering content */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .lottie-player {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .form-header {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-right: 230px;
+  }
+  
+  form {
+    background: #48c9b0;
+    padding: 45px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+    text-align: left;
+   
+
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    margin-right: 60px;
+  }
+  
+  .form-input {
+   
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f2f2f2;
+    border: none;
+    border-radius: 10px;
+   
+    
+    
+  }
+  
+  .form-actions {
+    margin-top: 20px;
+  }
+  
+  .submit-button {
+    max-width: 360px;
+    /* background: #17a589; */
+    background: linear-gradient(135deg, #a0d2eb,#8598ec);
+    padding: 15px;
+    border-radius: 30px;
+    margin-left: 160px;
+    border: none;
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background: #148f77;
+    transform: translateY(-4px);
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .error-message{
+    color: rgb(182, 76, 67);
+   
+  }
+  
