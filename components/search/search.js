@@ -51,7 +51,8 @@ app.controller('PlayerController',  function($scope, $http) {
         const requestOptions = {
             method: 'GET',
             headers: {
-                'x-rapidapi-key': '775b256dc0mshf54a83086a20d8bp1322ccjsn7071b3630aa7',
+                // 'x-rapidapi-key': '775b256dc0mshf54a83086a20d8bp1322ccjsn7071b3630aa7',
+                'x-rapidapi-key': 'af11df5fe8msh8c779a5dc8de434p152bd7jsnfdd02a5a8324',
                 'x-rapidapi-host': 'cricbuzz-cricket.p.rapidapi.com'
             }
         };

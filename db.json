@@ -17,6 +17,24 @@
       "phone": "9845949859",
       "password": "Nithish@16",
       "confirmPassword": "Nithish@16"
+    },
+    {
+      "id": "1011",
+      "firstName": "Venu Babu",
+      "lastName": "Peram",
+      "email": "Venu1@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "phone": "6301912209"
+    },
+    {
+      "id": "1011",
+      "firstName": "nithish",
+      "lastName": "Babu",
+      "email": "nithish@gmail.com",
+      "phone": "9394098745",
+      "password": "123456",
+      "confirmPassword": "123456"
     }
   ]
 }

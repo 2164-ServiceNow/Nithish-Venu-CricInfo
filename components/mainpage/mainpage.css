@@ -56,7 +56,8 @@
 }
 
 .dropdown-menu {
-    background-color: #ffffff; /* White dropdown background */
+    list-style-type: none;
+    background:transparent; /* White dropdown background */
     border: 1px solid #ddd;
 }
 
@@ -76,9 +77,81 @@
   .dropdown-menu.show {
     display: block;
   }
+  .btn-btn-light{
+    background: transparent;
+    border-color: transparent;
+    
+  }
+  .btn-btn-light img{
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+    cursor: pointer;
+    
+  }
 
 .app-icon{
     height: 45px; /* Smaller app icon size */
     width: 45px;
     margin:5px;
 }
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+
+/* Navigation Bar */
+.navigation {
+  width: 100%;
+  background-color: black;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 25px;
+  border-radius: 50px;
+  float: left;
+}
+
+/* Logout Text */
+.logout-text {
+  font-size: 0.8em;
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+  right: -18px;
+  bottom: -4px;
+  overflow: hidden;
+  letter-spacing: 3px;
+  opacity: 0;
+  transition: opacity 0.45s;
+  -webkit-transition: opacity 0.35s;
+}
+
+/* Button Link */
+.button-link {
+  text-decoration: none;
+  float: right;
+  padding: 12px;
+  margin: 15px;
+  color: white;
+  width: 25px;
+  background-color: black;
+  transition: width 0.35s;
+  -webkit-transition: width 0.35s;
+  overflow: hidden;
+}
+
+/* Hover Effect for Button Link */
+.button-link:hover {
+  width: 100px;
+}
+
+/* Hover Effect for Logout Text */
+.button-link:hover .logout-text {
+  opacity: 0.9;
+}
+
+/* Remove Underline for Links */
+.button-link a {
+  text-decoration: none;
+}
+/* .component{
+  background-color: #ffffff;
+} */

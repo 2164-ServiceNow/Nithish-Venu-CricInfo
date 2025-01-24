@@ -5,6 +5,7 @@ app.controller('NewsController', function ($scope, $http) {
 
     const apiUrl = 'https://cricbuzz-cricket.p.rapidapi.com/news/v1/index';
     const headers = {
+        // 'x-rapidapi-key': 'c87094213dmsh668c9d18f0eb8b1p11d416jsnf09a6f7c422b'
         'x-rapidapi-key': '512de4bd0amsheb7ae393da6ef50p1e564ajsn17df7980532d',
         'x-rapidapi-host': 'cricbuzz-cricket.p.rapidapi.com'
     };

@@ -35,7 +35,8 @@ h2 {
 }
 
 .team-card {
-    border: 1px solid #ddd;
+    border: 2px solid #a0d2eb;
+    /* border-color: linear-gradient(135deg, #a0d2eb,#8598ec); */
     border-radius: 8px;
     padding: 10px;
     width: 300px;

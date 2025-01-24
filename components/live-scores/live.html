@@ -11,8 +11,12 @@
             </div>
             <div class="match-status">
                 <p><strong>Status:</strong> {{ match.status }}</p>
+
                 <p><strong>Venue:</strong> {{ match.venue }}, {{ match.city }}</p>
                 <p><strong>Start Date:</strong> {{ match.startDate }}</p>
+                <p><strong>State:</strong> {{ match.state }}</p>
+                <p><strong>Ground:</strong> {{ match.ground }}</p>
+
             </div>
         </div>
     </div>
@@ -20,7 +24,6 @@
     <div class="no-matches" ng-if="!selectedMatch && !matches.length">
         <p>No live matches available at the moment.</p>
     </div>
-
     <!-- Detailed Scorecard for Selected Match -->
     <div class="match-details" ng-if="selectedMatch">
         <h2>Match Details - {{ selectedMatch.team1 }} vs {{ selectedMatch.team2 }}</h2>
@@ -40,8 +43,10 @@
 
             <div class="innings" ng-repeat="inning in scorecard.scoreCard">
                 <h4>{{ inning.batTeamDetails.batTeamName }}</h4>
-                <p><strong>Extras:</strong> {{ inning.extrasData.total }}</p>
+                <p><strong>Runs:</strong> {{ inning.scoreDetails.runs }}/{{inning.scoreDetails.wickets}}</p>
                 <p><strong>Overs:</strong> {{ inning.scoreDetails.overs }}</p>
+                <p><strong>Extras:</strong> {{ inning.extrasData.total }}</p>
+                
 
                 <!-- Batsmen -->
                 <h4>Batsmen</h4>

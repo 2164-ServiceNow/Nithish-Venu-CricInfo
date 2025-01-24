@@ -1,9 +1,16 @@
 .form-container {
-    width: 700px;
-    padding: 2%;
-    margin: 0 auto;
-    height: auto;
-    position: relative;
+  width: 100%; /* Make it full-width */
+  height: 100vh; /* Full height of the viewport */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Reset padding */
+  background-image: url("/assets/back.jpg");
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  background-attachment: fixed; /* Fix the background for a parallax effect */
+  display: flex; /* Use Flexbox for centering content */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
   }
   
   .header-container {
@@ -61,12 +68,13 @@
   
   .submit-button {
     max-width: 360px;
-    background: #17a589;
+    /* background: #17a589; */
+    background: linear-gradient(135deg, #a0d2eb,#8598ec);
     padding: 15px;
     border-radius: 30px;
-    margin-left: 260px;
+    margin-left: 160px;
     border: none;
-    color: white;
+    color: rgb(10, 10, 10);
     font-weight: bold;
     transition: 0.2s;
     cursor: pointer;

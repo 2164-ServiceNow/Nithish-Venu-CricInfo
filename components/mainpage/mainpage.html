@@ -1,76 +1,80 @@
 <div ng-controller="MainPageController as $ctrl">
-<nav class="navbar navbar-expand-lg navbar-light bg-light custom-header" >
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-        <!-- Left Section: Logo and App Name -->
-        <div class="left-section d-flex align-items-center">
-            <lottie-player 
-            src="./../../assets/app-icon.json" 
-            background="transparent" 
-            speed="1" 
-            class="app-icon" 
-            loop autoplay>
-          </lottie-player>
-            <span class="app-name">CricInfo</span>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light custom-header" >
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+          <!-- Left Section: Logo and App Name -->
+          <div class="left-section d-flex align-items-center">
+              <lottie-player 
+              src="./../../assets/app-icon.json" 
+              background="transparent" 
+              speed="1" 
+              class="app-icon" 
+              loop autoplay>
+            </lottie-player>
+              <span class="app-name">CricInfo</span>
+          </div>
 
-        <!-- Middle Section: Navigation Buttons -->
-        <div class="middle-section">
-            <!-- <button class="btn btn-outline-primary" ng-click="$ctrl.showComponent('schedule')">Schedule</button>
-            <button class="btn btn-outline-secondary" ng-click="$ctrl.showComponent('about')">About</button>
-            <button class="btn btn-outline-success" ng-click="$ctrl.showComponent('contact')">Contact</button> -->
-            <button class="btn btn-outline-primary" ng-click="$ctrl.setActiveComponent('schedule')">Schedule</button>
-            <button class="btn btn-outline-secondary" ng-click="$ctrl.setActiveComponent('live')">Live Matches</button>
-            <button class="btn btn-outline-secondary" ng-click="$ctrl.setActiveComponent('teams')">Teams</button>
-            <button class="btn btn-outline-success" ng-click="$ctrl.setActiveComponent('player')">Players</button> 
-            <button class="btn btn-outline-success" ng-click="$ctrl.setActiveComponent('news')">News</button>
+          <!-- Middle Section: Navigation Buttons -->
+          <div class="middle-section">
+             
+              <button class="btn btn-outline-primary" ng-click="$ctrl.setActiveComponent('schedule')">Schedule</button>
+              <button class="btn btn-outline-secondary" ng-click="$ctrl.setActiveComponent('live')">Live Matches</button>
+              <button class="btn btn-outline-secondary" ng-click="$ctrl.setActiveComponent('teams')">Teams</button>
+              <button class="btn btn-outline-success" ng-click="$ctrl.setActiveComponent('player')">Players</button> 
+              <button class="btn btn-outline-success" ng-click="$ctrl.setActiveComponent('rankings')">Rankings</button>
+              <button class="btn btn-outline-success" ng-click="$ctrl.setActiveComponent('news')">News</button>
 
-        </div>
 
-        <!-- Right Section: Logout Dropdown -->
-        <div class="right-section">
-          <button class="btn btn-light" type="button" ng-click="$ctrl.toggleDropdown()">
-            <i class="fas fa-user"></i>
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-          </button>
-          <!-- Dropdown Menu -->
-          <ul class="dropdown-menu" ng-class="{'show': $ctrl.isDropdownVisible}" aria-labelledby="dropdownMenuButton">
-        
-            <li><a class="dropdown-item" href="" ng-click="$ctrl.logout()">Logout</a></li>
-          </ul>
-        </div>
-    </div>
-</nav>
+          </div>
+
+          <!-- Right Section: Logout Dropdown -->
+          <div class="right-section">
+            
+             
+              <button class="btn-btn-light" type="button" href="" ng-click="$ctrl.logout()"><img src="/assets/logout.png"></button>
+            
+           
+          </div>
+      </div>
+  </nav>
 <!-- <schedule></schedule> -->
-<div class="container-fluid mt-4">
-  
-  <div ng-switch="$ctrl.showComponent">
+  <div  class="component">
     
-    <div ng-switch-when="schedule">
-      <schedule></schedule>
-    </div>
-    <div ng-switch-when="live">
+    <div ng-switch="$ctrl.showComponent">
       
-      <live></live>
-    </div>
-    <div ng-switch-when="teams">
-      
-      <teams></teams>
-    </div>
-    <div ng-switch-when="news">
-      
-      <news></news>
-    </div>
-    <div ng-switch-when="player">
-      
-      <player></player>
-    </div>
+      <div ng-switch-when="schedule">
+        <schedule></schedule>
+      </div>
+      <div ng-switch-when="live">
+        
+        <live></live>
+      </div>
+      <div ng-switch-when="teams">
+        
+        <teams></teams>
+      </div>
+      <div ng-switch-when="news">
+        
+        <news></news>
+      </div>
+      <div ng-switch-when="player">
+        
+        <player></player>
+      </div>
+      <div ng-switch-when="rankings">
+        
+        <rankings></rankings>
+      </div>
+      <div ng-switch-when="home">
+        
+        <home></home>
+      </div>
 
-    
+      
+    </div>
+      <!-- <div ng-if="$ctrl.showComponent === 'contact'">
+        <contact-component></contact-component>
+      </div>  -->
+      
   </div>
-    <!-- <div ng-if="$ctrl.showComponent === 'contact'">
-      <contact-component></contact-component>
-    </div>  -->
-    
-</div>
 </div>
   

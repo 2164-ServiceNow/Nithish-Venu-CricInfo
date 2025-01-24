@@ -1,4 +1,4 @@
-app.controller('LoginController', function ($scope, $http, $location) {
+app.controller('LoginController', function ($scope,AuthService, $http, $location) {
     console.log('hello');
     $scope.login = function (credentials) {
       $http.get('http://localhost:3000/users').then(
@@ -13,7 +13,8 @@ app.controller('LoginController', function ($scope, $http, $location) {
           console.log(user);
  
           if (user) {
-            alert('Login successful!');
+            // alert('Login successful!');
+            AuthService.login();
             // Redirect based on user type or other conditions
             $location.path('/main'); // Adjust the path as needed
           } else {

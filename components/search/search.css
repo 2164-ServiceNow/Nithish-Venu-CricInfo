@@ -35,8 +35,9 @@ h1 {
   .search-btn {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #004d99;
-    color: white;
+    /* background-color: #004d99; */
+    background: linear-gradient(135deg, #a0d2eb,#8598ec);
+    color: rgb(49, 45, 45);
     border: none;
     border-radius: 5px;
     cursor: pointer;
