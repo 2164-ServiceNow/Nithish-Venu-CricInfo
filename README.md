@@ -22,27 +22,19 @@ The CricInfo Hub is a single-page web application designed to provide real-time 
 
 * As a user, I want to search for detailed player statistics, including runs, wickets, and rankings.
 
-* As a user, I want to filter matches by format (e.g., Test, ODI, T20) to find the matches I’m most interested in.
+*As a user, I want to view a list of teams and their respective players, so I can easily explore team compositions and details
   
-* As a user, I want to see team rankings across formats, so I can compare my favorite teams.
+* As a user, I want to see team rankings and player rankings across formats, so I can compare my favorite teams.
 
-* As a user, I want to view detailed scorecards for completed matches, including batting, bowling, and fielding stats.
+* As a user, I want to view detailed scorecards for live matches, including batting, bowling, and fielding stats.
 
-* As a user, I want to filter match results by tournament or year to view historical records.
+* As a user, I want to explore the latest cricket news, so I can stay updated on matches, players, and events.
 
 
 **Development Environment Setup:**
 
 *   Detailed instructions for setting up the development environment (e.g., Node.js version, npm/yarn commands, AngularJS CLI commands if applicable).
 *   Precise steps to install all project dependencies.
-
-**Commands Used:**
-
-*   for json server - 1. npm install -g json-server 
-                      2. json-server --watch db.json
-
-    npm install express
-    node server.js
 
 
 ### Collaborators:
